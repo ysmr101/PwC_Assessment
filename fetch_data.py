@@ -124,7 +124,7 @@ def query_gpt_3_5_turbo(user_query):
         
         context = get_context_from_vector_db(user_query)
         prompt = f"Based on the information: {context} \nHow would you answer the user's query about: {user_query}?"
-        openai.api_key = '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'
+        openai.api_key = 'OPENAI_API_KEY_HERE'
         response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "system", "content": "You are a helpful assistant."},
@@ -142,7 +142,7 @@ def query_gpt4(user_query):
 
         context = get_context_from_vector_db(user_query)
         prompt = f"Based on the information: {context} \nHow would you answer the user's query about: {user_query}?"
-        openai.api_key = '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'  # Ensure your API key is correctly configured
+        openai.api_key = 'OPENAI_API_KEY_HERE'  # Ensure your API key is correctly configured
         response = openai.chat.completions.create(
             model="gpt-4",  # Confirm the model ID is correct and available to you
             messages=[{"role": "system", "content": "You are a helpful assistant."},
