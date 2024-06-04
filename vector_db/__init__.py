@@ -1,0 +1,1 @@
+from .db_manager import insert_vector, text_to_vector
